@@ -1,13 +1,8 @@
-#server.py
-
 import os
 import pickle
-def reverse_fun():
-      with open("users.json","rb") as f:
-          data = f.read()
-      
-      d = pickle.loads(data)
-      return d
-
-if __name__ == '__main__':
-      print(reverse_fun()) 
+def insecure_deserialization():      
+    f = open("users.json","rb")      
+    na = pickle.load(f)      
+    return na
+if __name__ == '__main__':      
+    print(insecure_deserialization())
