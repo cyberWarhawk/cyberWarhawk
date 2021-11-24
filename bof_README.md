@@ -4,3 +4,5 @@ alphabets.
 
 
 arr[10] = 11;  //can lead to segmentation fault in C 
+
+The answer.sh bash script passes the two parameters requested by the application and then causes the crash by providing a value not adjustable in arr[] hence leading to a Undefined Behaviour/Segmentation Fault.
