@@ -9,5 +9,7 @@ The answer.sh bash script passes the two parameters requested by the application
 
 
 Compile Instructions : g++ -o question question.cpp
+
 Run file using : ./question
+
 run testing file : bash answer.sh
