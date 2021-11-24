@@ -1,1 +1,2 @@
-@CyberWarhawk, into infosec and capture the flags
+@CyberWarhawk
+Into CTFs and Infosec
